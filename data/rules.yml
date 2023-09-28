@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to any question using OpenAI
+    steps:
+      - intent: ask_question
+      - action: action_answer_question
+
+  - rule: Handle unable to answer
+    steps:
+      - intent: unable_to_answer
+      - action: action_answer_question
+
+  - rule: Respond to fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_answer_question
+
+  - rule: Goodbye response
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
