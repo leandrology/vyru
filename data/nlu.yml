@@ -1,95 +1,95 @@
-version: "3.1"
+version: '3.1'
 
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
 
-  - intent: greet_back
-    examples: |
-      - how are you today?
-      - hello Ruby
-      - how are you today, Ruby?
-      - how are you feeling today?
-      - hi, how's it going?
-      - hey, what's up?
-      - good to see you, how have you been?
-      - hello, how's your day going?
-      - hi there, how's everything?
-      - hey, how's life treating you?
-      - greetings, how do you do?
-      - hi, how are you holding up?
+- intent: greet_back
+  examples: |
+    - how are you today?
+    - hello Ruby
+    - how are you today, Ruby?
+    - how are you feeling today?
+    - hi, how's it going?
+    - hey, what's up?
+    - good to see you, how have you been?
+    - hello, how's your day going?
+    - hi there, how's everything?
+    - hey, how's life treating you?
+    - greetings, how do you do?
+    - hi, how are you holding up?
 
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
 
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
 
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
 
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-      - good
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - good
 
-  - intent: inquire_business
-    examples: |
-      - What type of senior living community is ABC Senior Living?
-      - Where is ABC Senior Living located?
-      - How many residents are at ABC Senior Living?
-      - What care levels are available ABC Senior Living?
-      - How many programs do you offer?
-      - How many activites do you offer?
+- intent: inquire_business
+  examples: |
+    - What type of senior living community is ABC Senior Living?
+    - Where is ABC Senior Living located?
+    - How many residents are at ABC Senior Living?
+    - What care levels are available ABC Senior Living?
+    - How many programs do you offer?
+    - How many activites do you offer?
 
   # - intent: undecided
   #   examples: |
@@ -97,115 +97,115 @@ nlu:
   #     - What
   #     - How
 
-  - intent: inquire_business
-    examples: |
-      - What is this restaurant known for
-      - Can you tell me more about this business
-      - What type of food does this restaurant serve
-      - What are the hours of operation for this establishment
-      - Is this restaurant family-friendly
-      - Can you provide me with more information about this business
-      - What is the price range for this restaurant
-      - Does this establishment have any special offers or promotions
-      - Can I make reservations at this restaurant
-      - What type of atmosphere can I expect at this restaurant
-      - Is there a dress code for this establishment
-      - What are the most popular dishes at this restaurant
-      - Does this restaurant offer takeout or delivery
-      - Are there any dietary restrictions that this establishment accommodates
+- intent: inquire_business
+  examples: |
+    - What is this restaurant known for
+    - Can you tell me more about this business
+    - What type of food does this restaurant serve
+    - What are the hours of operation for this establishment
+    - Is this restaurant family-friendly
+    - Can you provide me with more information about this business
+    - What is the price range for this restaurant
+    - Does this establishment have any special offers or promotions
+    - Can I make reservations at this restaurant
+    - What type of atmosphere can I expect at this restaurant
+    - Is there a dress code for this establishment
+    - What are the most popular dishes at this restaurant
+    - Does this restaurant offer takeout or delivery
+    - Are there any dietary restrictions that this establishment accommodates
 
-  - intent: inquire_breakfast
-    examples: |
-      - What's available for breakfast?
-      - Can you tell me about breakfast options
-      - What do you serve for breakfast
-      - Is there a breakfast menu available
-      - Do you offer breakfast specials
-      - Can I order breakfast items all day
-      - What time is breakfast served until
-      - Is breakfast included in the room rate
-      - What is the cost of breakfast
-      - How do I place a breakfast order
-      - Can I get breakfast delivered to my room
+- intent: inquire_breakfast
+  examples: |
+    - What's available for breakfast?
+    - Can you tell me about breakfast options
+    - What do you serve for breakfast
+    - Is there a breakfast menu available
+    - Do you offer breakfast specials
+    - Can I order breakfast items all day
+    - What time is breakfast served until
+    - Is breakfast included in the room rate
+    - What is the cost of breakfast
+    - How do I place a breakfast order
+    - Can I get breakfast delivered to my room
 
-  - intent: inquire_lunch
-    examples: |
-      - What's available for lunch?
-      - What's for lunch today
-      - Can you tell me about the lunch menu
-      - What are the lunch specials
-      - Is there a vegetarian option for lunch
-      - What time is lunch served
-      - I'm hungry. What are my lunch options
-      - Can I make a lunch reservation
-      - How much does lunch cost
+- intent: inquire_lunch
+  examples: |
+    - What's available for lunch?
+    - What's for lunch today
+    - Can you tell me about the lunch menu
+    - What are the lunch specials
+    - Is there a vegetarian option for lunch
+    - What time is lunch served
+    - I'm hungry. What are my lunch options
+    - Can I make a lunch reservation
+    - How much does lunch cost
 
-  - intent: inquire_dinner
-    examples: |
-      - What's available for dinner?
-      - What's on the dinner menu
-      - Can you tell me about tonight's dinner options
-      - What are you serving for dinner tonight
-      - Is there a vegetarian option for dinner
-      - What time is dinner served
-      - Can I make a dinner reservation
-      - I'd like to know more about the dinner entrees
-      - Are there any dinner specials tonight
-      - Can I order dinner for delivery
-      - What is the price range for dinner
+- intent: inquire_dinner
+  examples: |
+    - What's available for dinner?
+    - What's on the dinner menu
+    - Can you tell me about tonight's dinner options
+    - What are you serving for dinner tonight
+    - Is there a vegetarian option for dinner
+    - What time is dinner served
+    - Can I make a dinner reservation
+    - I'd like to know more about the dinner entrees
+    - Are there any dinner specials tonight
+    - Can I order dinner for delivery
+    - What is the price range for dinner
 
-  - intent: inquire_dessert
-    examples: |
-      - What's on the dinner menu
-      - Can you tell me about tonight's dinner options
-      - What are you serving for dinner tonight
-      - Is there a vegetarian option for dinner
-      - What time is dinner served
-      - Can I make a dinner reservation
-      - I'd like to know more about the dinner entrees
-      - Are there any dinner specials tonight
-      - Can I order dinner for delivery
-      - What is the price range for dinner
+- intent: inquire_dessert
+  examples: |
+    - What's on the dinner menu
+    - Can you tell me about tonight's dinner options
+    - What are you serving for dinner tonight
+    - Is there a vegetarian option for dinner
+    - What time is dinner served
+    - Can I make a dinner reservation
+    - I'd like to know more about the dinner entrees
+    - Are there any dinner specials tonight
+    - Can I order dinner for delivery
+    - What is the price range for dinner
 
-  - intent: inquire_why_servingintel
-    examples: |
-      - Tell me about ServingIntel
-      - Who is ServingIntel
-      - Why ServingIntel
-      - What can ServingIntel do for me
-      - How can ServingIntel improve
-      - Senior Living Communities and ServingIntel
+- intent: inquire_why_servingintel
+  examples: |
+    - Tell me about ServingIntel
+    - Who is ServingIntel
+    - Why ServingIntel
+    - What can ServingIntel do for me
+    - How can ServingIntel improve
+    - Senior Living Communities and ServingIntel
 
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
 
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
 
-  - intent: ask_me_anything
-    examples: |
-      - ask me anything
-      - would you like to ask me something
-      - feel free to ask me about things
-      - want to ask me something?
+- intent: ask_me_anything
+  examples: |
+    - ask me anything
+    - would you like to ask me something
+    - feel free to ask me about things
+    - want to ask me something?
 
   # - intent: repeat_name
   #   examples: |
@@ -214,15 +214,15 @@ nlu:
   #     - do you know my name?
   #     - repeat my name
 
-  - intent: give_name
-    examples: |
-      - My name is [John](user_name)
-      - I'm [Mary](user_name)
-      - [Tom](user_name) is my name
-      - [Vincent](user_name)
-      - [Harry](user_name)
-      - I am [Lily](user_name)
-      - [Michelle](user_name)
+- intent: give_name
+  examples: |
+    - My name is [John](user_name)
+    - I'm [Mary](user_name)
+    - [Tom](user_name) is my name
+    - [Vincent](user_name)
+    - [Harry](user_name)
+    - I am [Lily](user_name)
+    - [Michelle](user_name)
 
   # - intent: give_name
   #   examples: |
@@ -230,33 +230,39 @@ nlu:
   #     - I'm not sure, can you rephrase your question?
   #     - Sorry, I didn't understand your question. Can you please provide more information?
 
-  - intent: residents_served
-    examples: |
-      - Ruby, how many residents did we serve for breakfast today?
-      - How many residents did we serve for breakfast today?
-      - Count the residents the we serve breakfast today.
+- intent: residents_served
+  examples: |
+    - Ruby, how many residents did we serve for breakfast today?
+    - How many residents did we serve for breakfast today?
+    - Count the residents the we serve breakfast today.
 
-  - intent: served_last_week
-    examples: |
-      - Ruby, how many meals did we serve last week?
-      - How many meals did we serve last week?
-      - Count the meals the we serve last week.
+- intent: served_last_week
+  examples: |
+    - Ruby, how many meals did we serve last week?
+    - How many meals did we serve last week?
+    - Count the meals the we serve last week.
 
-  - intent: ask_question
-    examples: |
-      - Can you help me with this problem I'm having?
-      - I'm not sure what to do about this issue.
-      - This is a really complicated question, can you help me with it?
-      - Who is the president of the Philippines?
-      - Who invented the light bulb?
-      - How to make a program?
-      - What is the color of banana
-      - Color of banana
-      - How can I solve stock algorithm?
-      - Who is Bill Gates?
-      - Who discovered west indies?
-      - Who discovered america?
-      - 1 + 1
-      - 2 - 1
-      - 3 * 2
-      - 6 / 2
+- intent: ask_question
+  examples: |
+    - Can you help me with this problem I'm having?
+    - I'm not sure what to do about this issue.
+    - This is a really complicated question, can you help me with it?
+    - Who is the president of the Philippines?
+    - Who invented the light bulb?
+    - How to make a program?
+    - What is the color of banana
+    - Color of banana
+    - How can I solve stock algorithm?
+    - Who is Bill Gates?
+    - Who discovered west indies?
+    - Who discovered america?
+    - 1 + 1
+    - 2 - 1
+    - 3 * 2
+    - 6 / 2
+- intent: kiwi_color
+  examples: |
+    - What is the color of kiwi?
+- intent: kiwi_color
+  examples: |
+    - What is the color of kiwi?

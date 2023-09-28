@@ -5,6 +5,14 @@ from pymongo import MongoClient
 import ruamel.yaml
 import io
 
+import os
+
+# Get the current directory of admin.py
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Go two folders up
+three_folders_up = os.path.abspath(os.path.join(current_dir, "..", "..", ".."))
+
 class ResponseAdmin(admin.ModelAdmin):
     list_display = ('intent', 'message', 'response', 'createdate', 'status')  # Display fields in the admin table
     list_filter = [('status', ChoicesDropdownFilter)]
@@ -108,7 +116,7 @@ class ResponseAdmin(admin.ModelAdmin):
         )
         
         
-        path="/home/lancewbell/AI-BI/"
+        path=three_folders_up
         database = "rasa-ruby"
         collection = "rasamodels"
         client = MongoClient()

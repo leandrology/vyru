@@ -1,115 +1,140 @@
-version: "3.1"
+version: '3.1'
 
 intents:
-  - greet
-  - greet_back
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - inquire_breakfast
-  - inquire_lunch
-  - inquire_dinner
-  - inquire_business
-  - inquire_dessert
-  # - undecided
-  - ask_me_anything
-  - give_name
-  - repeat_name
-  - unable_to_answer
-  - residents_served
-  - served_last_week
-  - ask_question:
-      use_entities: false
-      intent_text:
-        type: "text"
+- greet
+- greet_back
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inquire_breakfast
+- inquire_lunch
+- inquire_dinner
+- inquire_business
+- inquire_dessert
+- ask_me_anything
+- give_name
+- repeat_name
+- unable_to_answer
+- residents_served
+- served_last_week
+- ask_question:
+    use_entities: false
+    intent_text:
+      type: text
 
+- kiwi_color
+- kiwi_color
 entities:
-  - user_name
-  
+- user_name
+
 slots:
   user_name:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: user_name
+    - type: from_entity
+      entity: user_name
 responses:
   utter_greet:
-    - text: "Greetings! How are you today?"
-    - text: "Hello! How are you today?"
+  - text: Greetings! How are you today?
+  - text: Hello! How are you today?
 
   utter_greet_back:
-    - text: "I am better than any Digital Assistant powered by the best artificial intelligence on Earth deserves to be. Thank you for asking! How can I serve you today?"
-    - text: "It is a great day to be alive. Thank you for asking! How can I serve you today?"
+  - text: I am better than any Digital Assistant powered by the best artificial intelligence
+      on Earth deserves to be. Thank you for asking! How can I serve you today?
+  - text: It is a great day to be alive. Thank you for asking! How can I serve you
+      today?
 
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://gifdb.com/images/high/fluffy-face-cat-dz1gybhj8vn04ouc.gif"
+  - text: 'Here is something to cheer you up:'
+    image: https://gifdb.com/images/high/fluffy-face-cat-dz1gybhj8vn04ouc.gif
 
   utter_inquire_business:
-    - text: "ABC Senior Living is a CCRC, or Life Plan community, that provides a combination of housing including independent living, assisted living and skilled nursing care available to residents, on one campus. We offer three levels of care on-site, and top-of-the-line amenities, including over 500 monthly programs and activities."
+  - text: ABC Senior Living is a CCRC, or Life Plan community, that provides a combination
+      of housing including independent living, assisted living and skilled nursing
+      care available to residents, on one campus. We offer three levels of care on-site,
+      and top-of-the-line amenities, including over 500 monthly programs and activities.
 
   # utter_undecided:
   #   - text: "Please provide more information"
 
   utter_inquire_breakfast:
-    - text: "Today for breakfast, we are serving a Denver Omlette with toast, Belgian Waffles with Fruit and Cream, and Banana Walnut Pancakes. Would you like to hear the selection for lunch?"
+  - text: Today for breakfast, we are serving a Denver Omlette with toast, Belgian
+      Waffles with Fruit and Cream, and Banana Walnut Pancakes. Would you like to
+      hear the selection for lunch?
 
   utter_inquire_lunch:
-    - text: "For lunch, we are serving a Cobb Salad with Blue Cheese Dressing, a Grilled Frisco Panini with homemade chips, and a bowl of French Onion soup with a Classic Caesar Salad. Might I interest you with our Dinner selections?"
+  - text: For lunch, we are serving a Cobb Salad with Blue Cheese Dressing, a Grilled
+      Frisco Panini with homemade chips, and a bowl of French Onion soup with a Classic
+      Caesar Salad. Might I interest you with our Dinner selections?
 
   utter_inquire_dinner:
-    - text: "For dinner this evening, we are serving our special surf and turf, including fresh-caught Mahi Mahi, beside a centercut prime tenderloin. We also have a Chicken Walnut Citrus Salad, and a Veggie Pizza. Would you like to hear about our desserts?"
+  - text: For dinner this evening, we are serving our special surf and turf, including
+      fresh-caught Mahi Mahi, beside a centercut prime tenderloin. We also have a
+      Chicken Walnut Citrus Salad, and a Veggie Pizza. Would you like to hear about
+      our desserts?
 
   utter_inquire_dessert:
-    - text: "For dessert today, if you're in the mood for something classic, try our creamy vanilla bean cheesecake or our rich chocolate mousse cake. Feeling adventurous? Our tangy key lime pie or our fruity mixed berry tart are sure to delight your taste buds. And if you're looking for a dessert that's both decadent and refreshing, try our coconut cream pie or our refreshing sorbet trio. Whatever your craving, we've got you covered."
+  - text: For dessert today, if you're in the mood for something classic, try our
+      creamy vanilla bean cheesecake or our rich chocolate mousse cake. Feeling adventurous?
+      Our tangy key lime pie or our fruity mixed berry tart are sure to delight your
+      taste buds. And if you're looking for a dessert that's both decadent and refreshing,
+      try our coconut cream pie or our refreshing sorbet trio. Whatever your craving,
+      we've got you covered.
 
   utter_why_servingintel:
-    - text: "ServingIntel is the leading provider of transaction management solutions for senior living that enables you to best serve your residents, guests, and increase operating income. We are your guide to navigating change, with the leading-edge capabilities you need and the collaboration you require to deliver results."
+  - text: ServingIntel is the leading provider of transaction management solutions
+      for senior living that enables you to best serve your residents, guests, and
+      increase operating income. We are your guide to navigating change, with the
+      leading-edge capabilities you need and the collaboration you require to deliver
+      results.
 
   utter_did_that_help:
-    - text: "Did that help you?"
+  - text: Did that help you?
 
   utter_happy:
-    - text: "Great, I appreciate you!"
+  - text: Great, I appreciate you!
 
   utter_goodbye:
-    - text: "Goodbye, {user_name}!"
+  - text: Goodbye, {user_name}!
 
   utter_iamabot:
-    - text: "I am a digital assistant created by ServingIntel. I am hear to serve you, in any way that I am currently trained.'"
+  - text: I am a digital assistant created by ServingIntel. I am hear to serve you,
+      in any way that I am currently trained.'
 
   utter_ask_name:
-    - text: "What is your name?"
+  - text: What is your name?
 
   utter_remember:
-    - text: Thank you {user_name}. I'll remember that.
+  - text: Thank you {user_name}. I'll remember that.
 
   utter_how_can_i_help:
-    - text: "How can I help you today?"
+  - text: How can I help you today?
 
   utter_residents_served:
-    - text: "93 Residents were served breakfast today."
+  - text: 93 Residents were served breakfast today.
 
   utter_served_last_week:
-    - text: "2,523 meals were served from Monday to Sunday of last week."
+  - text: 2,523 meals were served from Monday to Sunday of last week.
 
   utter_greet_ask_name:
-    - text: "Hello! I'm Ruby at your service. What is your name?"
+  - text: Hello! I'm Ruby at your service. What is your name?
 
   utter_offer_help:
-    - text: "How can I help you today, {user_name}?"
+  - text: How can I help you today, {user_name}?
 
 
+  utter_kiwi_color:
+  - text: Brown
 actions:
-  - action_say_name
-  - utter_ask_name
-  - utter_remember
-  - action_generate_response
-  - action_answer_question
+- action_say_name
+- utter_ask_name
+- utter_remember
+- action_generate_response
+- action_answer_question
 
 session_config:
   session_expiration_time: 60

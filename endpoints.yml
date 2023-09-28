@@ -33,7 +33,7 @@ action_endpoint:
 
 tracker_store:
   type: mongod
-  url: mongodb://localhost:27017
+  url: mongodb+srv://rubyadmin:ruby_admin123@cluster0.fnal82e.mongodb.net/
   db: rasa-ruby
   username: ruby-admin
   password: rubyadmin123
