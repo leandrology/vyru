@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Response
 from more_admin_filters import ChoicesDropdownFilter
 from pymongo import MongoClient
+from pymongo.server_api import ServerApi
 import ruamel.yaml
 import io
 
@@ -116,12 +117,19 @@ class ResponseAdmin(admin.ModelAdmin):
         )
         
         #connect to MongoDB Atlas
-        connection_string = "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
+        uri = "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
         
+
         path=three_folders_up
         database = "rasa-ruby"
         collection = "rasamodels"
-        client = MongoClient(connection_string)
+        client = MongoClient(uri, server_api=ServerApi('1'))
+        try:
+            client.admin.command('ping')
+            print("Pinged your deployment. You successfully connected to MongoDB!")
+        except Exception as e:
+            print(e)
+        # client = MongoClient(connection_string)
         db = client[database]
         collection = db[collection]
         # Perform your custom action here for each approved record
