@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-_*pvswt)b@1a_%7sc-52&lj^c_flpcay5rjbotcg-h3e!w4j$y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = ['*']
 ALLOWED_HOSTS = ['*']
 
 
@@ -45,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
