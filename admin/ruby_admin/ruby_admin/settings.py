@@ -79,6 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'rasa-ruby',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority',
+        }
     }
 }
 
