@@ -120,7 +120,7 @@ class ResponseAdmin(admin.ModelAdmin):
         uri = "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
         
 
-        path=three_folders_up
+        path="/home/leandrology/vyru/"
         database = "rasa-ruby"
         collection = "rasamodels"
         client = MongoClient(uri, server_api=ServerApi('1'))
