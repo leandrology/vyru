@@ -1,15 +1,15 @@
-version: '3.1'
+version: "3.1"
 
 stories:
-- story: answer question
-  steps:
-  - intent: ask_question
-  - action: action_answer_question
+  - story: answer question
+    steps:
+      - intent: ask_question
+      - action: action_answer_question
 
-- story: inquire business path
-  steps:
-  - intent: inquire_business
-  - action: utter_inquire_business
+  - story: inquire business path
+    steps:
+      - intent: inquire_business
+      - action: utter_inquire_business
 
   # - story: happy path
   #   steps:
@@ -22,16 +22,16 @@ stories:
   #     - intent: greet_back
   #     - action: utter_greet_back
 
-- story: inquire menu
-  steps:
-  - intent: inquire_breakfast
-  - action: utter_inquire_breakfast
-  - intent: inquire_lunch
-  - action: utter_inquire_lunch
-  - intent: inquire_dinner
-  - action: utter_inquire_dinner
-  - intent: inquire_dessert
-  - action: utter_inquire_dessert
+  - story: inquire menu
+    steps:
+      - intent: inquire_breakfast
+      - action: utter_inquire_breakfast
+      - intent: inquire_lunch
+      - action: utter_inquire_lunch
+      - intent: inquire_dinner
+      - action: utter_inquire_dinner
+      - intent: inquire_dessert
+      - action: utter_inquire_dessert
 
   # - story: undecided path
   #   steps:
@@ -79,28 +79,20 @@ stories:
   #     - intent: greet
   #     - action: action_generate_response
 
-- story: served record
-  steps:
-  - intent: served_last_week
-  - action: utter_served_last_week
-  - intent: residents_served
-  - action: utter_residents_served
+  - story: served record
+    steps:
+      - intent: served_last_week
+      - action: utter_served_last_week
+      - intent: residents_served
+      - action: utter_residents_served
 
-- story: ask name
-  steps:
-  - intent: greet
-  - action: utter_greet_ask_name
-  - intent: give_name
-    entities:
-    - user_name: John
-  - action: utter_offer_help
-  - intent: goodbye
-  - action: utter_goodbye
-- story: kiwi_color_story
-  steps:
-  - intent: kiwi_color
-  - action: utter_kiwi_color
-- story: kiwi_color_story
-  steps:
-  - intent: kiwi_color
-  - action: utter_kiwi_color
+  - story: ask name
+    steps:
+      - intent: greet
+      - action: utter_greet_ask_name
+      - intent: give_name
+        entities:
+          - user_name: John
+      - action: utter_offer_help
+      - intent: goodbye
+      - action: utter_goodbye  
