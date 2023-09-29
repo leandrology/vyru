@@ -115,11 +115,13 @@ class ResponseAdmin(admin.ModelAdmin):
             f'{rows_updated} record(s) have been approved.',
         )
         
+        #connect to MongoDB Atlas
+        connection_string = "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
         
         path=three_folders_up
         database = "rasa-ruby"
         collection = "rasamodels"
-        client = MongoClient()
+        client = MongoClient(connection_string)
         db = client[database]
         collection = db[collection]
         # Perform your custom action here for each approved record

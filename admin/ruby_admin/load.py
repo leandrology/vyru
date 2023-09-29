@@ -9,7 +9,7 @@ django.setup()
 
 from convo.models import Response
 # MongoDB connection
-client = pymongo.MongoClient("mongodb+srv://rubyadmin:ruby_admin123@cluster0.fnal82e.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority")
 db = client["rasa-ruby"]
 collection = db["rasamodels"]
 
