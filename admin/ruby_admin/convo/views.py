@@ -16,7 +16,7 @@ def train(request):
         # Execute the script to restart the Rasa server
         action = request.POST.get('action')
         if action == 'train':
-            subprocess.run(["rasa", "train"], cwd="/home/leandrology/vyru/", shell=False)
+            subprocess.run(["rasa", "train"], cwd=three_folders_up+"/", shell=False)
             # subprocess.run(["rasa", "train"], cwd="C:\\Users\\Philip\\Documents\\ServingIntel\\AI-BI", shell=True)
             # subprocess.run(["echo","1969Firebird!", "|","sudo", "-S","systemctl", "restart", "rasa.service"], cwd="/home/lancewbell/AI-BI/")
             # subprocess.run(["echo","1969Firebird!", "|","sudo", "-S","systemctl", "restart", "rasa-actions.service"], cwd="/home/lancewbell/AI-BI/")
