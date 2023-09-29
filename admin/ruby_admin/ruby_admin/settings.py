@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-_*pvswt)b@1a_%7sc-52&lj^c_flpcay5rjbotcg-h3e!w4j$y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/', 'https://*.cloudshell.dev/']
-CSRF_ALLOWED_ORIGINS = ["https://*.cloudshell.dev/"]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'https://*.cloudshell.dev']
+CSRF_ALLOWED_ORIGINS = ["https://*.cloudshell.dev"]
+CORS_ORIGINS_WHITELIST = ["https://*.cloudshell.dev"]
 ALLOWED_HOSTS = ['*']
 
 
