@@ -1,8 +1,10 @@
 runtime: python39
-entrypoint: gunicorn -b :$PORT main:app
+entrypoint: gunicorn -b :$PORT Ruby.wsgi
 
 env_variables:
   MONGO_URI: "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
+  DJANGO_SETTINGS_MODULE: "myapp.settings"
+  DJANGO_SECRET_KEY = "django-insecure-_*pvswt)b@1a_%7sc-52&lj^c_flpcay5rjbotcg-h3e!w4j$y"
 
 automatic_scaling:
   target_cpu_utilization: 0.65
@@ -10,5 +12,8 @@ automatic_scaling:
   max_instances: 10
 
 handlers:
+- url: /admin/ruby_admin/.*
+  script: auto
+
 - url: /.*
   script: auto
