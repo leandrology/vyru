@@ -12,7 +12,7 @@ automatic_scaling:
   max_instances: 10
 
 handlers:
-- url: /admin/ruby_admin/.*
+- url: /admin/.*
   script: auto
 
 - url: /.*
