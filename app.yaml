@@ -1,0 +1,12 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  MONGO_URI: "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
+
+handlers:
+- url: /admin/ruby_admin/.*
+  script: auto
+
+- url: /.*
+  script: auto
