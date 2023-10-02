@@ -1,14 +1,21 @@
 runtime: python39
-service: rasa-app
-handlers:
-- url: /
-  script: manage.py runserver
-- url: /admin/ruby_admin/
-  script: manage.py runserver
-  admin_handlers: yes
-  static_dir: /admin/ruby_admin/static
-  upload_url: /admin/ruby_admin/upload
-  login: admin
 
 env_variables:
-  RASA_MODEL_DIRECTORY: .
+  MONGO_URI: "mongodb+srv://rubyadmin123:rubyadmin123@cluster0.scmw523.mongodb.net/?retryWrites=true&w=majority"
+  DJANGO_SETTINGS_MODULE: "myapp.settings"
+  DJANGO_SECRET_KEY: "django-insecure-_*pvswt)b@1a_%7sc-52&lj^c_flpcay5rjbotcg-h3e!w4j$y"
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 10
+
+handlers:
+- url: /admin/ruby_admin/.*
+  script: auto
+
+- url: /trained_models
+  static_dir: trained_models
+
+- url: /.*
+  script: auto
