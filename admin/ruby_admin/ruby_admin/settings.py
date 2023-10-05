@@ -28,7 +28,7 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'https://*.cloudshell.dev']
 CSRF_ALLOWED_ORIGINS = ["https://*.cloudshell.dev"]
 CORS_ORIGINS_WHITELIST = ["https://*.cloudshell.dev"]
-ALLOWED_HOSTS = ['https://rubyai-admin.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
